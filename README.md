@@ -1,3 +1,4 @@
+<h1> theme_change package by Sumit Gohil</h1>
 theme_change: Seamless Theme Management with Persistent Preferences and GetX
 
 Transform your Flutter app's theme management with theme_change—a robust package designed to effortlessly handle theme changes and persist them across sessions. Leveraging the power of SharedPreferences for permanent storage and GetX for state management, theme_change provides an elegant solution for dynamic and persistent theming in your applications.
