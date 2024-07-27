@@ -17,7 +17,7 @@ Enjoy: Watch as theme_change handles theme persistence and state management, all
 Whether you're developing a new app or enhancing an existing one, theme_change offers a streamlined approach to managing user themes and preferences. Experience the convenience of persistent theming and reactive state management with theme_change!
 
 Installation:
-Add the following to your pubspec.yaml file:
+<h3>Add the following to your pubspec.yaml file like this (Shared Preference and Get are necessary for this package)</h3>:
 <p>
   <img src="https://github.com/user-attachments/assets/793df969-ff36-4f81-ade1-c9c1772b3d1b" height="461px"  width="811px" />
 
