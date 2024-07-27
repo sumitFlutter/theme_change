@@ -21,8 +21,8 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
 <p>
   <img src="https://github.com/user-attachments/assets/6afda44a-314a-4ba5-af70-a624a52eb75c" height="451px"  width="863px" />
    <br><h2>Then run Flutter pub get</h2>
-  <h3>Import This Library in the dart file --></h3>
-  <h2> import 'package:theme_change/theme_change.dart';  </h2><br>
+  <h4>Import This Library in the dart file --></h4>
+  <h3> import 'package:theme_change/theme_change.dart';  </h3><br>
   Your main.dart should be look like this --><br>
   <img src="https://github.com/user-attachments/assets/eaddbdf3-dba5-4696-a97d-3a19c5010c84" height="768px"  width="1366px" />
 <br> Now You can Use This Code Like This --><br>
