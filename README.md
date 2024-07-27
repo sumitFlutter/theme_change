@@ -19,7 +19,13 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
 Installation:
 <h3>Add the following to your pubspec.yaml file like this (Shared Preference and Get are necessary for this package)</h3>
 <p>
-  <img src="https://github.com/user-attachments/assets/793df969-ff36-4f81-ade1-c9c1772b3d1b" height="461px"  width="811px" />
-
+  <img src="https://github.com/user-attachments/assets/6afda44a-314a-4ba5-af70-a624a52eb75c" height="451px"  width="863px" />
    <br><h2>Then run Flutter pub get</h2>
+  Import Library in the dart file --><br>
+  <h4> import 'package:theme_change/theme_change.dart';  </h4><br>
+  Your main.dart should be look like this --><br>
+  <img src="https://github.com/user-attachments/assets/eaddbdf3-dba5-4696-a97d-3a19c5010c84" height="768px"  width="1366px" />
+<br> Now You can Use This Code Like This --><br>
+  <img src="https://github.com/user-attachments/assets/8aa151fd-4e16-4d63-94bc-cc859b20c4d8" height="839px"  width="160px" />
+
 </p>
