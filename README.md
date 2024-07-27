@@ -19,7 +19,7 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
 Installation:
 Add the following to your pubspec.yaml file:
 <p>
-  <img src="https://github.com/user-attachments/assets/793df969-ff36-4f81-ade1-c9c1772b3d1b" height="200px"  width="800px" />
+  <img src="https://github.com/user-attachments/assets/793df969-ff36-4f81-ade1-c9c1772b3d1b" height="461px"  width="811px" />
 
    <br>Then run Flutter pub get
 </p>
