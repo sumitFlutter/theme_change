@@ -21,5 +21,5 @@ Installation:
 <p>
   <img src="https://github.com/user-attachments/assets/793df969-ff36-4f81-ade1-c9c1772b3d1b" height="461px"  width="811px" />
 
-   <br><h1>Then run Flutter pub get</h1>
+   <br><h2>Then run Flutter pub get</h2>
 </p>
