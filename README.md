@@ -18,11 +18,12 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
 
 Installation:
 Add the following to your pubspec.yaml file:
-
-dependencies:<br>
-  theme_change:<br>
-    git:<br>
-      url: git://github.com/sumitFlutter/theme_change.git<br>
-   shared_preferences: ^2.2.3<br>
-   get: ^4.6.6<br>
+<p>
+dependencies:
+  theme_change:
+    git:
+      url: git://github.com/sumitFlutter/theme_change.git
+   shared_preferences: ^2.2.3
+   get: ^4.6.6
    Then run Flutter pub get
+</p>
