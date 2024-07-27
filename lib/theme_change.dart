@@ -57,11 +57,13 @@ class ThemeController extends GetxController{
   async{
     if(await ThemeChange.applyTheme()==null)
     {
-      pTheme.value=true;
+      pTheme.value=false;
+      theme.value=pTheme.value;
     }
     else
     {
       pTheme.value=(await ThemeChange.applyTheme())!;
+      theme.value=pTheme.value;
     }
     if(pTheme.value==true)
     {
