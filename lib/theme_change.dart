@@ -14,7 +14,7 @@ class ThemeChange{
   );
   static ThemeData darkTheme=ThemeData(
     useMaterial3: true,
-    colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow,brightness: Brightness.dark,),
+    colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff5a5a9c),brightness: Brightness.dark,),
   );
  static void saveTheme({required bool pTheme}) async {
    SharedPreferences s1 = await SharedPreferences.getInstance();
