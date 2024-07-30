@@ -24,7 +24,7 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
   <h4>Import This Library in the dart file --></h4>
   <h3> import 'package:theme_change/theme_change.dart';  </h3><br>
   Your main.dart should be look like this --><br>
-  <img src="https://github.com/user-attachments/assets/eaddbdf3-dba5-4696-a97d-3a19c5010c84" height="768px"  width="1366px" />
+  <img src="https://github.com/user-attachments/assets/eaddbdf3-dba5-4696-a97d-3a19c5010c84" height="768px"  width="1500px" />
 <br> Now You can Use This Code Like This --><br>
   <img src="https://github.com/user-attachments/assets/8aa151fd-4e16-4d63-94bc-cc859b20c4d8" height="160px"  width="839px" />
 
