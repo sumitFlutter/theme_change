@@ -1,4 +1,4 @@
-## 1.0.0
+## 2.0.0
 
 * New update:
 * Now you can also use Provider package for Theme Management
