@@ -16,16 +16,27 @@ class ThemeChange{
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff5a5a9c),brightness: Brightness.dark,),
   );
- static void saveTheme({required bool pTheme}) async {
+ static void saveThemeC({required bool pTheme}) async {
    SharedPreferences s1 = await SharedPreferences.getInstance();
-   s1.setBool("theme", pTheme);
+   s1.setBool("themeC", pTheme);
  }
 
- static Future<bool?> applyTheme() async {
+ static Future<bool?> applyThemeC() async {
    SharedPreferences s1 = await SharedPreferences.getInstance();
-   s1.getBool("theme");
-   return s1.getBool("theme");
+   s1.getBool("themeC");
+   return s1.getBool("themeC");
  }
+  static void saveThemeP({required bool pTheme}) async {
+    SharedPreferences s1 = await SharedPreferences.getInstance();
+    s1.setBool("themeP", pTheme);
+  }
+
+  static Future<bool?> applyThemeP() async {
+    SharedPreferences s1 = await SharedPreferences.getInstance();
+    s1.getBool("themeP");
+    return s1.getBool("themeP");
+  }
+
 }
 class ThemeController extends GetxController{
   RxBool theme=false.obs;
@@ -35,8 +46,8 @@ class ThemeController extends GetxController{
   void setTheme()
   async {
     theme.value=!theme.value;
-    ThemeChange.saveTheme(pTheme: theme.value);
-    pTheme.value=(await ThemeChange.applyTheme())!;
+    ThemeChange.saveThemeC(pTheme: theme.value);
+    pTheme.value=(await ThemeChange.applyThemeC())!;
     if(pTheme.value==true)
     {
       mode.value=ThemeMode.dark;
@@ -55,14 +66,14 @@ class ThemeController extends GetxController{
   }
   void getTheme()
   async{
-    if(await ThemeChange.applyTheme()==null)
+    if(await ThemeChange.applyThemeC()==null)
     {
       pTheme.value=false;
       theme.value=pTheme.value;
     }
     else
     {
-      pTheme.value=(await ThemeChange.applyTheme())!;
+      pTheme.value=(await ThemeChange.applyThemeC())!;
       theme.value=pTheme.value;
     }
     if(pTheme.value==true)
@@ -90,8 +101,8 @@ class ThemeProvider with ChangeNotifier{
   void setTheme()
   async {
     theme=!theme;
-    ThemeChange.saveTheme(pTheme: theme);
-    pTheme=(await ThemeChange.applyTheme())!;
+    ThemeChange.saveThemeP(pTheme: theme);
+    pTheme=(await ThemeChange.applyThemeP())!;
     if(pTheme==true)
     {
       mode=ThemeMode.dark;
@@ -111,14 +122,14 @@ class ThemeProvider with ChangeNotifier{
   }
   void getTheme()
   async{
-    if(await ThemeChange.applyTheme()==null)
+    if(await ThemeChange.applyThemeP()==null)
     {
       pTheme=false;
       theme=pTheme;
     }
     else
     {
-      pTheme=(await ThemeChange.applyTheme())!;
+      pTheme=(await ThemeChange.applyThemeP())!;
       theme=pTheme;
     }
     if(pTheme==true)
