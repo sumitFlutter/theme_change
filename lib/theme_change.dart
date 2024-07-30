@@ -82,4 +82,61 @@ class ThemeController extends GetxController{
     }
   }
 }
+class ThemeProvider with ChangeNotifier{
+  bool theme=false;
+  ThemeMode mode=ThemeMode.light;
+  IconData themeMode=Icons.dark_mode;
+  bool pTheme=false;
+  void setTheme()
+  async {
+    theme=!theme;
+    ThemeChange.saveTheme(pTheme: theme);
+    pTheme=(await ThemeChange.applyTheme())!;
+    if(pTheme==true)
+    {
+      mode=ThemeMode.dark;
+      themeMode=Icons.light_mode;
+    }
+    else if(pTheme==false)
+    {
+      mode=ThemeMode.light;
+      themeMode=Icons.dark_mode;
+    }
+    else
+    {
+      mode=ThemeMode.light;
+      themeMode=Icons.dark_mode;
+    }
+    notifyListeners();
+  }
+  void getTheme()
+  async{
+    if(await ThemeChange.applyTheme()==null)
+    {
+      pTheme=false;
+      theme=pTheme;
+    }
+    else
+    {
+      pTheme=(await ThemeChange.applyTheme())!;
+      theme=pTheme;
+    }
+    if(pTheme==true)
+    {
+      mode=ThemeMode.dark;
+      themeMode=Icons.light_mode;
+    }
+    else if(pTheme==false)
+    {
+      mode=ThemeMode.light;
+      themeMode=Icons.dark_mode;
+    }
+    else
+    {
+      mode=ThemeMode.light;
+      themeMode=Icons.dark_mode;
+    }
+    notifyListeners();
+  }
+}
 
