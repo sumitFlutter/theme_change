@@ -4,9 +4,11 @@ theme_change: Seamless Theme Management with Persistent Preferences and (GetX Or
 * New update:
 * Now you can also use Provider package for Theme Management
 * Now You can Choose Provider OR GetX Package For Theme Management
+* I preferred that using this package with Shared Preference and Get is far better than Shared Preference and Provider because Code's Complexity...
 
 Transform your Flutter app's theme management with theme_change—a robust package designed to effortlessly handle theme changes and persist them across sessions. Leveraging the power of SharedPreferences for permanent storage and (GetX OR Provider) for state management, theme_change provides an elegant solution for dynamic and persistent theming in your applications.<br><br>
-👉 Here theme_change package demo Application link (Using GetX Package):- https://github.com/sumitFlutter/theme_change_demo <br><br>
+<a href="https://github.com/sumitFlutter/theme_change_demo" >👉 Here theme_change package demo Application link (Using GetX Package and Shared Preference package):-</a>  <br>
+<a href="https://github.com/sumitFlutter/theme_change_demo2" >👉 Here theme_change package demo Application link (Using Provider Package and Shared Preference package):-</a> <br><br>
 Key Features:
 
 Persistent Theme Storage: Automatically saves user theme preferences using SharedPreferences, ensuring a consistent look every time they launch your app.
@@ -24,14 +26,25 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
 <p>
 <p>
 <h2> Using GetX Package :</h2>
-<h3>Add the following to your pubspec.yaml file like this (Shared Preference and Get are necessary for this package)</h3>
-<img src="https://github.com/user-attachments/assets/6afda44a-314a-4ba5-af70-a624a52eb75c" height="451px"  width="863px" />
+<h4>Add the following to your pubspec.yaml file (Shared Preference and Get are necessary for this package)</h4>
+<h3>theme_change: ^1.0.0</h3>
+<h3>And Add shared_preferences: to your pubspec.yaml file</h3>
+<h3>And Also Add get: to your pubspec.yaml file</h3>
    <br><h2>Then run Flutter pub get</h2>
   <h4>Import This Library in the dart file --></h4>
   <h3> import 'package:theme_change/theme_change.dart';  </h3><br>
-  Your main.dart should be look like this --><br>
-  <img src="https://github.com/user-attachments/assets/eaddbdf3-dba5-4696-a97d-3a19c5010c84" height="768px"  width="1500px" />
-<br> Now You can Use This Code Like This --><br>
-  <img src="https://github.com/user-attachments/assets/8aa151fd-4e16-4d63-94bc-cc859b20c4d8" height="160px"  width="839px" />
-</p>
+<a href="https://github.com/sumitFlutter/theme_change_demo/blob/main/lib/main.dart">Here is Example of main.dart</a>
+  </p>
+<hr>
+<p>
+<h2> Using Provider Package :</h2>
+<h4>Add the following to your pubspec.yaml file (Shared Preference and Get are necessary for this package)</h4>
+<h3>theme_change: ^1.0.0</h3>
+<h3>And Add shared_preferences: to your pubspec.yaml file</h3>
+<h3>And Also Add provider: to your pubspec.yaml file</h3>
+   <br><h2>Then run Flutter pub get</h2>
+  <h4>Import This Library in the dart file --></h4>
+  <h3> import 'package:theme_change/theme_change.dart';  </h3><br>
+<a href="https://github.com/sumitFlutter/theme_change_demo2/blob/main/lib/main.dart">Here is Example of main.dart</a>
+ </p>
 </p>
