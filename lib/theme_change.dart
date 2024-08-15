@@ -1,8 +1,10 @@
 library theme_change;
-
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider/single_child_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
+part 'theme_material_app.dart';
 
 
 ///Theme Change
