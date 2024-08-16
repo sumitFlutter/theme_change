@@ -1,9 +1,9 @@
-part of 'theme_change.dart';
+part of '../../theme_change.dart';
 class ThemeMaterialAppProvider extends StatefulWidget {
-  const ThemeMaterialAppProvider({super.key, required this.providers, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme});
+  const ThemeMaterialAppProvider({super.key, required this.providers, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.title});
 final List<SingleChildWidget> providers;
 final Map<String,WidgetBuilder>? routes;
-final String? initialRoute;
+final String? initialRoute,title;
 final Widget? home;
 final ThemeData? theme;
 final ThemeData? darkTheme;
@@ -27,14 +27,14 @@ class _ThemeMaterialAppProviderState extends State<ThemeMaterialAppProvider> {
         return widget.home==null&&widget.routes==null?
         MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: widget.title??'Flutter Demo',
           theme: widget.theme??ThemeChange.lightTheme,
           darkTheme: widget.darkTheme??ThemeChange.darkTheme,
           themeMode: value.mode,):
             widget.routes!=null&&widget.home!=null?
             MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'Flutter Demo',
+              title: widget.title??'Flutter Demo',
               theme: widget.theme??ThemeChange.lightTheme,
               darkTheme: widget.darkTheme??ThemeChange.darkTheme,
               themeMode: value.mode,
@@ -43,7 +43,7 @@ class _ThemeMaterialAppProviderState extends State<ThemeMaterialAppProvider> {
               initialRoute: widget.initialRoute??"/",):
         widget.home==null&&widget.routes!=null?MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: widget.title??'Flutter Demo',
           theme: widget.theme??ThemeChange.lightTheme,
           darkTheme: widget.darkTheme??ThemeChange.darkTheme,
           themeMode: value.mode,
@@ -51,7 +51,7 @@ class _ThemeMaterialAppProviderState extends State<ThemeMaterialAppProvider> {
         initialRoute: widget.initialRoute??"/",):
         MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: widget.title??'Flutter Demo',
           theme: widget.theme??ThemeChange.lightTheme,
           darkTheme: widget.darkTheme??ThemeChange.darkTheme,
           themeMode: value.mode,
