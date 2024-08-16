@@ -19,13 +19,14 @@ class _ThemeMaterialAppProviderState extends State<ThemeMaterialAppProvider> {
     // TODO: implement initState
     super.initState();
     otherProvider.addAll(List.from(widget.otherProviders));
-    otherProvider.add(ChangeNotifierProvider.value(value: ThemeProvider()..getTheme()));
+    otherProvider.add(ChangeNotifierProvider.value(value: ThemeProvider()));
   }
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: otherProvider,
       child: Consumer<ThemeProvider>(builder: (context, value, child) {
+        value.getTheme();
         return widget.home==null&&widget.routes==null?
         MaterialApp(
           debugShowCheckedModeBanner: false,
