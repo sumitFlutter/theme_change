@@ -1,7 +1,7 @@
 part of '../../theme_change.dart';
 class ThemeMaterialAppProvider extends StatefulWidget {
-  const ThemeMaterialAppProvider({super.key, required this.providers, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.title});
-final List<SingleChildWidget> providers;
+  const ThemeMaterialAppProvider({super.key, required this.otherProviders, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.title});
+final List<SingleChildWidget> otherProviders;
 final Map<String,WidgetBuilder>? routes;
 final String? initialRoute,title;
 final Widget? home;
@@ -13,16 +13,18 @@ final ThemeData? darkTheme;
 }
 
 class _ThemeMaterialAppProviderState extends State<ThemeMaterialAppProvider> {
+  List <SingleChildWidget> otherProvider=[];
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    widget.providers.add(ChangeNotifierProvider.value(value: ThemeProvider()..getTheme()));
+    otherProvider.addAll(List.from(widget.otherProviders));
+    otherProvider.add(ChangeNotifierProvider.value(value: ThemeProvider()..getTheme()));
   }
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: widget.providers,
+      providers: otherProvider,
       child: Consumer<ThemeProvider>(builder: (context, value, child) {
         return widget.home==null&&widget.routes==null?
         MaterialApp(
