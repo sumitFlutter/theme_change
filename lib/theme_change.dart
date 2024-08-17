@@ -7,7 +7,6 @@ import 'package:get/get.dart';
 part 'provider/widgets/theme_material_app.dart';
 part 'get/widgets/theme_material_app.dart';
 part 'get/widgets/theme_obx.dart';
-part 'provider/widgets/theme_consumer.dart';
 part 'get/controller/theme_controller.dart';
 part 'provider/state/theme_provider.dart';
 ///Theme Change

@@ -1,0 +1,26 @@
+Example of main method (Using Provider)
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(
+    const ThemeMaterialAppProvider(
+      home: MyHomePage(title: "Theme Change Demo"),
+      otherProviders: [],
+    ),
+  );
+}
+
+
+Example of main method (Using Get)
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(
+    const ThemeMaterialAppGetX(
+      home: MyHomePage(title: "Demo"),
+    ),
+  );
+}
+
+View Full Example Using Readme File's Link
+

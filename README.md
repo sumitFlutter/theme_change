@@ -1,7 +1,25 @@
 <h1> theme_change package by Sumit Gohil</h1>
 theme_change: Seamless Theme Management with Persistent Preferences and (GetX Or Provider)
 
-* New update:
+* What's new :
+* You can use this package provided MaterialApp in runApp...
+* ThemeMaterialAppGetX for Get
+* ThemeMaterialAppProvider for Provider
+
+
+* ThemeMaterialAppGetX's Properties ->
+* ThemeMaterialAppGetX({super.key, this.title, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.debugShowCheckedModeBanner})
+
+
+* ThemeMaterialAppProvider's Properties ->
+* ThemeMaterialAppProvider({super.key, required this.otherProviders, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.title, this.debugShowCheckedModeBanner})
+
+
+^ Exclusive Feature for GetX User Only
+* Now You can Use ThemeObserver Widget Instead of Obx() Widget
+
+
+* Version 2.0.0:
 * Now you can also use Provider package for Theme Management
 * Now You can Choose Provider OR GetX Package For Theme Management
 * I preferred that using this package with Shared Preference and Get is far better than Shared Preference and Provider because Code's Complexity...
@@ -27,7 +45,7 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
 <p>
 <h2> Using GetX Package :</h2>
 <h4>Add the following to your pubspec.yaml file (Shared Preference and Get are necessary for this package)</h4>
-<h3>theme_change: ^2.0.0</h3>
+<h3>theme_change: ^2.0.2</h3>
 <h3>And Add shared_preferences: to your pubspec.yaml file</h3>
 <h3>And Also Add get: to your pubspec.yaml file</h3>
    <br><h2>Then run Flutter pub get</h2>
@@ -39,7 +57,7 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
 <p>
 <h2> Using Provider Package :</h2>
 <h4>Add the following to your pubspec.yaml file (Shared Preference and Provider are necessary for this package)</h4>
-<h3>theme_change: ^2.0.0</h3>
+<h3>theme_change: ^2.0.2</h3>
 <h3>And Add shared_preferences: to your pubspec.yaml file</h3>
 <h3>And Also Add provider: to your pubspec.yaml file</h3>
    <br><h2>Then run Flutter pub get</h2>
