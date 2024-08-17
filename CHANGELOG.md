@@ -1,3 +1,25 @@
+## 2.0.2
+* What's New
+
+* You can use this package provided MaterialApp in runApp... 
+* ThemeMaterialAppGetX for Get
+* ThemeMaterialAppProvider for Provider
+
+
+* ThemeMaterialAppGetX's Properties ->
+* ThemeMaterialAppGetX({super.key, this.title, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.debugShowCheckedModeBanner})
+
+
+* ThemeMaterialAppProvider's Properties ->
+* ThemeMaterialAppProvider({super.key, required this.otherProviders, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.title, this.debugShowCheckedModeBanner})
+
+
+^ Exclusive Feature for GetX User Only
+* Now You can Use ThemeObserver Widget Instead of Obx() Widget
+
+
+
+
 ## 2.0.0
 
 * New update:

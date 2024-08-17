@@ -2,7 +2,7 @@ name: theme_change
 description: "theme_change package by Sumit Gohil
 theme_change: Seamless Theme Management with Persistent Preferences and (GetX OR Provider)
 Transform your Flutter app's theme management with theme_change—a robust package designed to effortlessly handle theme changes and persist them across sessions. Leveraging the power of SharedPreferences for permanent storage and GetX OR Provider for state management, theme_change provides an elegant solution for dynamic and persistent theming in your applications."
-version: 2.0.0
+version: 2.0.2
 homepage:
  https://github.com/sumitFlutter/theme_change/
 repository:

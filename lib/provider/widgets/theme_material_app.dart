@@ -1,12 +1,13 @@
 part of '../../theme_change.dart';
 class ThemeMaterialAppProvider extends StatefulWidget {
-  const ThemeMaterialAppProvider({super.key, required this.otherProviders, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.title});
+  const ThemeMaterialAppProvider({super.key, required this.otherProviders, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.title, this.debugShowCheckedModeBanner});
 final List<SingleChildWidget> otherProviders;
 final Map<String,WidgetBuilder>? routes;
 final String? initialRoute,title;
 final Widget? home;
 final ThemeData? theme;
 final ThemeData? darkTheme;
+final bool? debugShowCheckedModeBanner;
 
   @override
   State<ThemeMaterialAppProvider> createState() => _ThemeMaterialAppProviderState();
@@ -29,14 +30,14 @@ class _ThemeMaterialAppProviderState extends State<ThemeMaterialAppProvider> {
         value.getTheme();
         return widget.home==null&&widget.routes==null?
         MaterialApp(
-          debugShowCheckedModeBanner: false,
+          debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner??true,
           title: widget.title??'Flutter Demo',
           theme: widget.theme??ThemeChange.lightTheme,
           darkTheme: widget.darkTheme??ThemeChange.darkTheme,
           themeMode: value.mode,):
             widget.routes!=null&&widget.home!=null?
             MaterialApp(
-              debugShowCheckedModeBanner: false,
+              debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner??true,
               title: widget.title??'Flutter Demo',
               theme: widget.theme??ThemeChange.lightTheme,
               darkTheme: widget.darkTheme??ThemeChange.darkTheme,
@@ -45,7 +46,7 @@ class _ThemeMaterialAppProviderState extends State<ThemeMaterialAppProvider> {
               routes: widget.routes!,
               initialRoute: widget.initialRoute??"/",):
         widget.home==null&&widget.routes!=null?MaterialApp(
-          debugShowCheckedModeBanner: false,
+          debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner??true,
           title: widget.title??'Flutter Demo',
           theme: widget.theme??ThemeChange.lightTheme,
           darkTheme: widget.darkTheme??ThemeChange.darkTheme,
@@ -53,7 +54,7 @@ class _ThemeMaterialAppProviderState extends State<ThemeMaterialAppProvider> {
         routes: widget.routes!,
         initialRoute: widget.initialRoute??"/",):
         MaterialApp(
-          debugShowCheckedModeBanner: false,
+          debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner??true,
           title: widget.title??'Flutter Demo',
           theme: widget.theme??ThemeChange.lightTheme,
           darkTheme: widget.darkTheme??ThemeChange.darkTheme,

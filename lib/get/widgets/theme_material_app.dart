@@ -1,11 +1,12 @@
 part of '../../theme_change.dart';
 class ThemeMaterialAppGetX extends StatefulWidget {
-  const ThemeMaterialAppGetX({super.key, this.title, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme});
+  const ThemeMaterialAppGetX({super.key, this.title, this.routes, this.home, this.initialRoute, this.theme, this.darkTheme, this.debugShowCheckedModeBanner});
 final Map<String,WidgetBuilder>? routes;
 final String? initialRoute,title;
 final Widget? home;
 final ThemeData? theme;
 final ThemeData? darkTheme;
+final bool? debugShowCheckedModeBanner;
 
   @override
   State<ThemeMaterialAppGetX> createState() => _ThemeMaterialAppGetXState();
@@ -23,14 +24,14 @@ class _ThemeMaterialAppGetXState extends State<ThemeMaterialAppGetX> {
     return Obx(() =>
      widget.home==null&&widget.routes==null?
     GetMaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner??true,
       title: widget.title??'Flutter Demo',
       theme: widget.theme??ThemeChange.lightTheme,
       darkTheme: widget.darkTheme??ThemeChange.darkTheme,
       themeMode: ThemeChange.themeController.mode.value,):
         widget.routes!=null&&widget.home!=null?
         GetMaterialApp(
-          debugShowCheckedModeBanner: false,
+          debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner??true,
           title: widget.title??'Flutter Demo',
           theme: widget.theme??ThemeChange.lightTheme,
           darkTheme: widget.darkTheme??ThemeChange.darkTheme,
@@ -39,7 +40,7 @@ class _ThemeMaterialAppGetXState extends State<ThemeMaterialAppGetX> {
           routes: widget.routes!,
           initialRoute: widget.initialRoute??"/",):
     widget.home==null&&widget.routes!=null?GetMaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner??true,
       title: widget.title??'Flutter Demo',
       theme: widget.theme??ThemeChange.lightTheme,
       darkTheme: widget.darkTheme??ThemeChange.darkTheme,
@@ -47,7 +48,7 @@ class _ThemeMaterialAppGetXState extends State<ThemeMaterialAppGetX> {
     routes: widget.routes!,
     initialRoute: widget.initialRoute??"/",):
     GetMaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: widget.debugShowCheckedModeBanner??true,
       title: widget.title??'Flutter Demo',
       theme: widget.theme??ThemeChange.lightTheme,
       darkTheme: widget.darkTheme??ThemeChange.darkTheme,
