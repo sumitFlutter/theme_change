@@ -2,7 +2,7 @@
 theme_change: Seamless Theme Management with Persistent Preferences and (GetX Or Provider)
 
 * What's new :
-* You can use this package provided MaterialApp in runApp...
+* You can use this package provided MaterialApp in runApp method
 * ThemeMaterialAppGetX for Get
 * ThemeMaterialAppProvider for Provider
 

@@ -1,6 +1,8 @@
 part of '../../theme_change.dart';
+
 class ThemeObserver extends StatefulWidget {
   const ThemeObserver({super.key, required this.child});
+
   final Widget child;
 
   @override
@@ -10,6 +12,7 @@ class ThemeObserver extends StatefulWidget {
 class _ThemeObserverState extends State<ThemeObserver> {
   @override
   Widget build(BuildContext context) {
-    return Obx(() => widget.child,);
+    return Obx(() =>
+        ThemeChange.themeController.pTheme.value ? widget.child : widget.child);
   }
 }

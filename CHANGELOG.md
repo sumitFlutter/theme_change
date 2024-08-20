@@ -1,3 +1,5 @@
+## 2.0.4
+* Bug Fixed in ThemeObserver() Widget
 ## 2.0.2
 * What's New
 
