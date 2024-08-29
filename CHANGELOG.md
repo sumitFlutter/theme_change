@@ -1,4 +1,4 @@
-## 2.0.4
+## 2.0.5
 * Bug Fixed in ThemeObserver() Widget
 ## 2.0.2
 * What's New
