@@ -45,7 +45,7 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
 <p>
 <h2> Using GetX Package :</h2>
 <h4>Add the following to your pubspec.yaml file (Shared Preference and Get are necessary for this package)</h4>
-<h3>theme_change: ^2.0.2</h3>
+<h3>theme_change: ^2.0.5</h3>
 <h3>And Add shared_preferences: to your pubspec.yaml file</h3>
 <h3>And Also Add get: to your pubspec.yaml file</h3>
    <br><h2>Then run Flutter pub get</h2>
@@ -57,7 +57,7 @@ Whether you're developing a new app or enhancing an existing one, theme_change o
 <p>
 <h2> Using Provider Package :</h2>
 <h4>Add the following to your pubspec.yaml file (Shared Preference and Provider are necessary for this package)</h4>
-<h3>theme_change: ^2.0.2</h3>
+<h3>theme_change: ^2.0.5</h3>
 <h3>And Add shared_preferences: to your pubspec.yaml file</h3>
 <h3>And Also Add provider: to your pubspec.yaml file</h3>
    <br><h2>Then run Flutter pub get</h2>
